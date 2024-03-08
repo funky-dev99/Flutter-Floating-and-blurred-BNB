@@ -50,7 +50,13 @@ class _FinalViewState extends State<FinalView> {
     ThemeData theme = Theme.of(context);
     return Scaffold(
       backgroundColor: theme.scaffoldBackgroundColor,
-      appBar: AppBar(title: const Text("Blurred Bottom Navigation Bar")),
+      appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: const Center(
+              child: Text(
+            "Blurred Bottom Navigation Bar",
+            style: TextStyle(color: Colors.deepPurpleAccent),
+          ))),
       body: Stack(
         fit: StackFit.expand,
         children: [
@@ -61,7 +67,7 @@ class _FinalViewState extends State<FinalView> {
             ),
             itemBuilder: (context, index) {
               return Card(
-                color: theme.primaryColor,
+                color: Colors.deepPurple.shade300,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -100,7 +106,7 @@ class _FinalViewState extends State<FinalView> {
             child: Container(
               decoration: BoxDecoration(
                 border:
-                Border.all(width: 2, color: theme.scaffoldBackgroundColor),
+                    Border.all(width: 2, color: theme.scaffoldBackgroundColor),
                 borderRadius: const BorderRadius.only(
                     topRight: Radius.circular(24),
                     topLeft: Radius.circular(24),
